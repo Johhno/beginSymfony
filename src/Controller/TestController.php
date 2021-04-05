@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
@@ -13,6 +14,10 @@ class TestController
         dd('Ca fonctionne');
     }
 
+    /** @Route(
+     * "/test/{age?0}",
+     * name ="test")
+     */
     public function afficheAge(Request $request, $age)
     {
         switch ($age) {
