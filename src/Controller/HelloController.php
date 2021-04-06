@@ -9,20 +9,22 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HelloController
 {
-    protected $logger;
+    protected $calculator;
+
     public function __construct(Calculator $calculator)
     {
         $this->calculator = $calculator;
     }
+
     /** @Route(
      * "/hello/{prenom?World}",
      * name ="hello")
      */
-    public function hello($prenom, LoggerInterface $logger)
+    public function hello($prenom, LoggerInterface $logger, Calculator $calculator)
     {
-        $logger->error('Mon meessage de log');
+        $logger->info('Mon message de log 1');
 
-        $tva = $this->calculator->calcul(100);
+        $tva = $calculator->calcul(100);
 
         dd($tva);
         return new Response("Hello $prenom");
