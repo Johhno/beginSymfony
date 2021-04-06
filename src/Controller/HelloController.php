@@ -2,8 +2,7 @@
 
 namespace App\Controller;
 
-
-// use App\Taxes\Calculator;
+use App\Taxes\Calculator;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,17 +10,21 @@ use Symfony\Component\Routing\Annotation\Route;
 class HelloController
 {
     protected $logger;
-    public function __construct(LoggerInterface $logger)
+    public function __construct(Calculator $calculator)
     {
-        $this->logger = $logger;
+        $this->calculator = $calculator;
     }
     /** @Route(
      * "/hello/{prenom?World}",
      * name ="hello")
      */
-    public function hello($prenom)
+    public function hello($prenom, LoggerInterface $logger)
     {
-        $this->logger->error('Mon meessage de log');
+        $logger->error('Mon meessage de log');
+
+        $tva = $this->calculator->calcul(100);
+
+        dd($tva);
         return new Response("Hello $prenom");
     }
 }
