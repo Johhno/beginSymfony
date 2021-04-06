@@ -7,31 +7,7 @@
 		<title>Salut</title>
 	</head>
 	<body>
-		<h1>Hello {{prenom}}</h1>
-
-		<p>Vous avez {{age}} ans
-			{% if age>=18 %} 
-                Vous êtes un adulte
-			{% else%} 
-                Tu es un enfant
-			{% endif%}
-            </p>
-
-            </ul>
-                {% for prenom in prenoms %}
-                <li>{{prenom}}</li> 
-                {#prenom|upper#}
-                {%endfor%}
-            </ul>
-
-			<ul>
-				{% for i in 1..5 %}
-					<li>Numéro {{ i }} </li>
-				{% endfor%}
-			</ul>
-
-
-			</body>
-		</p>
+		<h1>Hello
+			{{formateur.prenom}} {{formateur.nom}}</h1>
 	</body>
-</html></body></html>
+</html>
