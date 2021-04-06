@@ -11,9 +11,10 @@ class HelloController
 {
     protected $calculator;
 
-    public function __construct(Calculator $calculator)
+    public function __construct(Calculator $calculator, LoggerInterface $logger)
     {
         $this->calculator = $calculator;
+        $this->logger = $logger;
     }
 
     /** @Route(
@@ -24,9 +25,9 @@ class HelloController
     {
         $logger->info('Mon message de log 1');
 
-        $tva = $calculator->calcul(100);
+        $tva = $this->calculator->calcul(100);
 
-        dd($tva);
+        dump($tva);
         return new Response("Hello $prenom");
     }
 }
