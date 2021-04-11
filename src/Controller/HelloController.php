@@ -19,7 +19,7 @@ class HelloController
             'prenom' => $prenom,
             'formateur1'=>['prenom'=>'John','nom' => 'Tchen'],
             'formateur2'=>['prenom'=>'Melodie','nom' => 'Huynh'],
-            'formateur3'=>['prenom'=>'Remy','nom' => 'Marquis'],
+            'formateur3'=>['prenom'=>'Remy','nom' => 'Marquis']
         ]);
         return new Response($html);
     }

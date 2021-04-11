@@ -3,8 +3,9 @@
 {% block body %}
 	<h1>Hello {{prenom}}</h1>
 	<h2>Nos formateurs</h1>
-{% include "_formateur.html.twig" with "formateur":formateur1 %}
-{% include "_formateur.html.twig" with "formateur":formateur2 %}
+{% include "_formateur.html.twig" with {"formateur": formateur1} %}
+{% include "_formateur.html.twig" with {"formateur": formateur2} %}
+{% include "_formateur.html.twig" with {"formateur": formateur3} %}
 
 {% endblock %}
 
