@@ -3,8 +3,14 @@
 {% block body %}
 	<h1>Hello {{prenom}}</h1>
 	<h2>Nos formateurs</h1>
+{# Creer une variable #}
+{% set formateur=formateur1 %}
 {% include "_formateur.html.twig" with {"formateur": formateur1} %}
+
+{% set formateur=formateur2 %}
 {% include "_formateur.html.twig" with {"formateur": formateur2} %}
+
+{% set formateur=formateur3 %}
 {% include "_formateur.html.twig" with {"formateur": formateur3} %}
 
 {% endblock %}
