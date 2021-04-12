@@ -9,23 +9,29 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HelloController
 {
+    protected $twig;
 
-    /* Ces 2 fonctions ont en commun : twig , render(). */
-    /** @Route(  "/hello/{prenom?World}", name ="hello") */
-    public function hello($prenom, Environment $twig)
+    public function __construct(Environment $twig)
     {
-        $html = $twig->render('hello.html.twig', [
-            'prenom' => $prenom
-        ]);
+        $this->twig = $twig;
+    }
+
+    /* Ces 2 fonctions ont en commun : twig , render() */
+    public function render(string $path, array $variables = [])
+    {
+        $html = $this->twig->render($path, $variables);
         return new Response($html);
     }
 
-    /** @Route( * "/example", name ="example") */
-    public function example(Environment $twig)
+    /** @Route(  "/hello/{prenom?World}", name ="hello") */
+    public function hello($prenom)
     {
-        $html = $twig->render('example.html.twig', [
-            'age' => 33
-        ]);
-        return new Response($html);
+        return $this->render('hello.html.twig', ['prenom' => $prenom]);
+    }
+
+    /** @Route( * "/example", name ="example") */
+    public function example()
+    {
+        return $this->render('example.html.twig', ['age' => 33]);
     }
 }
