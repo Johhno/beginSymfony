@@ -1,8 +1,9 @@
-extensions
-Php intelephense
-twig language 2
+extensions VCStudio
+Php intelephense - Ben Mewburn
+Twig language 2
+PHP Namespace Resolver - Mehedi
 
-settings
+Settings
 suggest basic disable variables
 format on save
 
