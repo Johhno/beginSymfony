@@ -1,9 +1,10 @@
-extensions VCStudio
+# Extensions VCStudio
+## Commandes
 Php intelephense - Ben Mewburn
 Twig language 2
 PHP Namespace Resolver - Mehedi
 
-Settings
+## Settings
 suggest basic disable variables
 format on save
 
