@@ -16,6 +16,7 @@ Symfony flex => composer require annotations (Routes)
                 composer req debug
                 composer req doctrine
 ## Commandes
-symfony serve
+symfony serve 
+(background)symfony serve -d 
 ##Doc
 https://symfony.com/doc/current/setup/symfony_server.html
