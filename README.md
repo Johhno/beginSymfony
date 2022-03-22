@@ -1,8 +1,8 @@
 # Extensions VCStudio
 
-Php intelephense - Ben Mewburn
-Twig language 2
-PHP Namespace Resolver - Mehedi
+- Php intelephense . Ben Mewburn
+- Twig language 2 . mblode
+- PHP Namespace Resolver . Mehedi Hassan
 
 ## Settings
 suggest basic disable variables
