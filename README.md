@@ -12,18 +12,17 @@ format on save
 
 emmet include languages
 item twig value html
-
+```shell
 Symfony flex => composer require annotations (Routes)
-
                 composer require twig (HTML)
-                
                 composer req debug
-                
                 composer req doctrine
+```
 ## Commandes
+```shell
 symfony serve
-
 (background)symfony serve -d
+```
 ## Doc
 https://symfony.com/doc/current/setup/symfony_server.html
 ## PHP not found
